@@ -44,6 +44,10 @@ class AOClient : public QObject
 {
     Q_OBJECT
 
+  private:
+    bool rps_waiting = false;
+    QString rps_choice;
+
   public:
     /**
      * @brief Describes a command's details.
@@ -1390,6 +1394,15 @@ class AOClient : public QObject
      * @copydetails AOClient::cmdRoll
      */
     void cmdRollP(int argc, QStringList argv);
+
+    /**
+     * @brief Rock Paper Scissors game
+     * 
+     * @details accepts an argument of either rock, paper, or scissors
+     * 
+     * @iscommand
+     */
+    void cmdRps(int argc, QStringList argv);
 
     /**
      * @brief Gets or sets the global or one of the area-specific timers.
