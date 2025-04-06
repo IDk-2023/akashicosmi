@@ -53,7 +53,7 @@ const QMap<QString, AOClient::CommandInfo> AOClient::COMMANDS{
     {"cleardoc", {{ACLRole::NONE}, 0, &AOClient::cmdClearDoc}},
     {"cm", {{ACLRole::NONE}, 0, &AOClient::cmdCM}},
     {"uncm", {{ACLRole::CM}, 0, &AOClient::cmdUnCM}},
-    {"areaname", {{ACLRole::MODERATOR}, 1, &AOClient::cmdAreaName}},
+    {"areaname", {{ACLRole::MODCHAT}, 1, &AOClient::cmdAreaName}},
     {"invite", {{ACLRole::CM}, 1, &AOClient::cmdInvite}},
     {"uninvite", {{ACLRole::CM}, 1, &AOClient::cmdUnInvite}},
     {"area_lock", {{ACLRole::CM}, 0, &AOClient::cmdLock}},

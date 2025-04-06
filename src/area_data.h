@@ -468,7 +468,7 @@ class AreaData : public QObject
      *
      * @see #map_statuses
      */
-    void setName(const Qstring &new_name)
+    void setName(const QString &new_name);
 
     /**
      * @brief Changes the area of the status to a new one.
