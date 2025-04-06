@@ -279,6 +279,11 @@ void AreaData::replaceEvidence(int f_eviId, const AreaData::Evidence &f_newEvi_r
     m_evidence.replace(f_eviId, f_newEvi_r);
 }
 
+void AreaData::setName(const QString &new_name)
+{
+    m_name = new_name;
+}
+
 AreaData::Status AreaData::status() const
 {
     return m_status;

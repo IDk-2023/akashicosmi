@@ -109,6 +109,19 @@ void AOClient::cmdUnCM(int argc, QStringList argv)
     arup(ARUPType::CM, true);
 }
 
+void AOClient::cmdAreaName(int argc, QStringList argv)
+{
+    if (argc < 1) {
+        sendServerMessage("Usage: /areaname <new_name>");
+        return;
+    }
+
+    AreaData *l_area = server->getAreaById(areaId());
+    QString new_name = argv.join(" ");
+    l_area->setName(new_name);
+    sendServerMessage("Area name changed to " + new_name);
+}
+
 void AOClient::cmdInvite(int argc, QStringList argv)
 {
     Q_UNUSED(argc);

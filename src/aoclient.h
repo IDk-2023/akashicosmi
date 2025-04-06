@@ -844,6 +844,15 @@ class AOClient : public QObject
     void cmdUnCM(int argc, QStringList argv);
 
     /**
+     * @brief Changes the name of the area.
+     *
+     * @details Takes a **name** as an argument. And needs to be called from the area itself by a moderator.
+     *
+     * @iscommand
+     */
+    void cmdAreaName(int argc, QStringList argv);
+
+    /**
      * @brief Invites a client to the area.
      *
      * @details Needs a **user ID** as an argument.

@@ -462,6 +462,15 @@ class AreaData : public QObject
     Status status() const;
 
     /**
+     * @brief Sets the status of the area to a new one.
+     *
+     * @param f_newStatus_r A string that a client would enter as an argument for the `/status` command.
+     *
+     * @see #map_statuses
+     */
+    void setName(const Qstring &new_name)
+
+    /**
      * @brief Changes the area of the status to a new one.
      *
      * @param f_newStatus_r A string that a client would enter as an argument for the `/status` command.
